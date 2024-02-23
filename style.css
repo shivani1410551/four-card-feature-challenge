@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a,
+img,
+span,
+button {
+  display: block;
+}
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--VeryLightGray);
+  min-height: 100vh;
+  max-width: 100%;
+}
+.head {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.head h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--GrayishBlue);
+  padding-bottom: 10px;
+}
+.head h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.head p {
+  color: var(--GrayishBlue);
+  line-height: 1.4;
+  font-weight: 200;
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.cards .card {
+  position: relative;
+  max-width: 350px;
+  min-height: 240px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem;
+}
+.cards .mid .card {
+  margin-bottom: 1.5rem;
+}
+.card img {
+  position: absolute;
+  /* margin-left: auto; */
+  right: 25px;
+  bottom: 25px;
+}
+.cards .card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.cards .card p {
+  color: var(--GrayishBlue);
+  line-height: 1.4;
+  font-size: 0.7rem;
+  font-weight: 200;
+}
+.supervisor {
+  border-top: 4px solid var(--Cyan);
+}
+.teamBuilder {
+  border-top: 4px solid var(--Red);
+}
+.karma {
+  border-top: 4px solid var(--Orange);
+}
+.calculator {
+  border-top: 4px solid var(--Blue);
+}
+@media screen and (max-width: 425px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .cards .card {
+    max-width: 315px;
+    min-height: 240px;
+    margin-bottom: 2rem;
+  }
+  .head {
+    max-width: 315px;
+  }
+  .head h1 {
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+  }
+  .head h2 {
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+  }
+  .head p {
+    font-size: 0.8rem;
+    padding-bottom: 15px;
+  }
+}
